@@ -1,20 +1,21 @@
-<div class="navbar navbar-default navbar-static-top" ng-controller="NavbarController">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" ng-click="nav.isCollapsed = !nav.isCollapsed">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="navbar-brand">south-trooper</a>
-    </div>
-    <div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
-        <li ng-repeat="item in nav.menu" ui-sref-active="active">
-            <a ui-sref="{{item.state}}">{{item.title}}</a>
+<header class="menu">
+  <div class="contain">
+    <nav>
+      <a ui-sref-active="active" ui-sref="main"><img class="logo" ng-src="/assets/images/yeoman.png"/></a>
+      <ul>
+        <li>
+          <a class="landing_alink" title="Our products" ui-sref-active="active" ui-sref="articles">Products</a>
+        </li>
+        <li>
+          <a class="landing_alink" title="Get your quotations" ui-sref-active="active" ui-sref="about">Quotations</a>
+        </li>
+        <li>
+          <a class="landing_alink" title="Get your estimate" ui-sref-active="active" ui-sref="about">Get your estimate</a>
+        </li>
+        <li>
+          <a class="landing_alink" title="About us" ui-sref-active="active" ui-sref="about">About</a>
         </li>
       </ul>
-    </div>
+    </nav>
   </div>
-</div>
+</header>

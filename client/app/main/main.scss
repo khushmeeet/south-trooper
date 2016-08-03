@@ -1,27 +1,117 @@
-.thing-form {
-  margin: 20px 0;
+header nav{
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+  margin: 40px 0;
+  //mobile
+  @media only screen and (min-width : 120px) and (max-device-width : 480px) {
+    margin-top: 20px;
+  }
 }
-
-#banner {
-  border-bottom: none;
-  margin-top: -20px;
+header nav > ul{
+  list-style-type: none;
+  float: right;
+  margin-bottom: 0px;
+  margin-top: 15px;
+  display: inline-flex;
+  //mobile
+  @media only screen and (min-width : 120px) and (max-device-width : 480px) {
+    margin-top: 5px;
+  }
 }
-
-#banner h1 {
-  font-size: 60px;
-  line-height: 1;
-  letter-spacing: -1px;
+.menu{
+  position: absolute;
+  width: 100%;
+  right: 0;
+  margin-left: -20px;
+  z-index: 10;
+  display: block;
 }
-
-.hero-unit {
+.contain{
+  margin: 0 10% 0 10%;
+  //mobile
+  @media only screen and (min-width : 120px) and (max-device-width : 480px) {
+    margin: 0 10px 0 10px;
+  }
+}
+.logo{
   position: relative;
+  float: left;
+  width: 55px;
+  height: 55px;
+  //mobile
+  @media only screen and (min-width : 120px) and (max-device-width : 480px) {
+    height: 25px;
+    width: 25px;
+  }
+}
+.logo:hover{
+  cursor: pointer;
+}
+.landing_alink{
+  color: white;
+  display: inline-block;
+  margin-left: 30px;
+  text-transform: capitalize;;
+  font-weight: bold;
+  font-size: 0.9em;
+  i:hover{
+    cursor: pointer;
+  }
+  //mobile
+  @media only screen and (min-width : 120px) and (max-device-width : 480px) {
+    font-size: 0.9em;
+    margin-left: 15px;
+  }
+}
+.landing_alink:hover{
+  color: white;
+  text-decoration: underline;
+}
+#banner{
+  position: fixed;
+  margin-left: 0px;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  //background-image: url('/assets/images/orange.jpg');
+  background-color: #0b121d;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#banner h1 {
+  font-size: 4em;
+  line-height: 1;
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+  letter-spacing: -1px;
+  //mobile
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    font-size: 2.4em;
+  }
+}
+.landing {
   padding: 30px 15px;
   color: #F5F5F5;
   text-align: center;
+  color: white;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  background: #4393B9;
+}
+.vertical-center{
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-.navbar-text {
-  margin-left: 15px;
+//Breakpoints
+//mobile
+@media only screen and (min-width : 120px) and (max-device-width : 480px)  {
+
+}
+//tablets
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
 }
