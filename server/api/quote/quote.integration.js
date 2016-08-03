@@ -3,40 +3,40 @@
 var app = require('../..');
 import request from 'supertest';
 
-var newThing;
+var newQuote;
 
-describe('Thing API:', function() {
+describe('Quote API:', function() {
 
-  describe('GET /api/things', function() {
-    var things;
+  describe('GET /api/quotes', function() {
+    var quotes;
 
     beforeEach(function(done) {
       request(app)
-        .get('/api/things')
+        .get('/api/quotes')
         .expect(200)
         .expect('Content-Type', /json/)
         .end((err, res) => {
           if (err) {
             return done(err);
           }
-          things = res.body;
+          quotes = res.body;
           done();
         });
     });
 
     it('should respond with JSON array', function() {
-      things.should.be.instanceOf(Array);
+      quotes.should.be.instanceOf(Array);
     });
 
   });
 
-  describe('POST /api/things', function() {
+  describe('POST /api/quotes', function() {
     beforeEach(function(done) {
       request(app)
-        .post('/api/things')
+        .post('/api/quotes')
         .send({
-          name: 'New Thing',
-          info: 'This is the brand new thing!!!'
+          name: 'New Quote',
+          info: 'This is the brand new quote!!!'
         })
         .expect(201)
         .expect('Content-Type', /json/)
@@ -44,55 +44,55 @@ describe('Thing API:', function() {
           if (err) {
             return done(err);
           }
-          newThing = res.body;
+          newQuote = res.body;
           done();
         });
     });
 
-    it('should respond with the newly created thing', function() {
-      newThing.name.should.equal('New Thing');
-      newThing.info.should.equal('This is the brand new thing!!!');
+    it('should respond with the newly created quote', function() {
+      newQuote.name.should.equal('New Quote');
+      newQuote.info.should.equal('This is the brand new quote!!!');
     });
 
   });
 
-  describe('GET /api/things/:id', function() {
-    var thing;
+  describe('GET /api/quotes/:id', function() {
+    var quote;
 
     beforeEach(function(done) {
       request(app)
-        .get('/api/things/' + newThing._id)
+        .get('/api/quotes/' + newQuote._id)
         .expect(200)
         .expect('Content-Type', /json/)
         .end((err, res) => {
           if (err) {
             return done(err);
           }
-          thing = res.body;
+          quote = res.body;
           done();
         });
     });
 
     afterEach(function() {
-      thing = {};
+      quote = {};
     });
 
-    it('should respond with the requested thing', function() {
-      thing.name.should.equal('New Thing');
-      thing.info.should.equal('This is the brand new thing!!!');
+    it('should respond with the requested quote', function() {
+      quote.name.should.equal('New Quote');
+      quote.info.should.equal('This is the brand new quote!!!');
     });
 
   });
 
-  describe('PUT /api/things/:id', function() {
-    var updatedThing;
+  describe('PUT /api/quotes/:id', function() {
+    var updatedQuote;
 
     beforeEach(function(done) {
       request(app)
-        .put('/api/things/' + newThing._id)
+        .put('/api/quotes/' + newQuote._id)
         .send({
-          name: 'Updated Thing',
-          info: 'This is the updated thing!!!'
+          name: 'Updated Quote',
+          info: 'This is the updated quote!!!'
         })
         .expect(200)
         .expect('Content-Type', /json/)
@@ -100,27 +100,27 @@ describe('Thing API:', function() {
           if (err) {
             return done(err);
           }
-          updatedThing = res.body;
+          updatedQuote = res.body;
           done();
         });
     });
 
     afterEach(function() {
-      updatedThing = {};
+      updatedQuote = {};
     });
 
-    it('should respond with the updated thing', function() {
-      updatedThing.name.should.equal('Updated Thing');
-      updatedThing.info.should.equal('This is the updated thing!!!');
+    it('should respond with the updated quote', function() {
+      updatedQuote.name.should.equal('Updated Quote');
+      updatedQuote.info.should.equal('This is the updated quote!!!');
     });
 
   });
 
-  describe('DELETE /api/things/:id', function() {
+  describe('DELETE /api/quotes/:id', function() {
 
     it('should respond with 204 on successful removal', function(done) {
       request(app)
-        .delete('/api/things/' + newThing._id)
+        .delete('/api/quotes/' + newQuote._id)
         .expect(204)
         .end((err, res) => {
           if (err) {
@@ -130,9 +130,9 @@ describe('Thing API:', function() {
         });
     });
 
-    it('should respond with 404 when thing does not exist', function(done) {
+    it('should respond with 404 when quote does not exist', function(done) {
       request(app)
-        .delete('/api/things/' + newThing._id)
+        .delete('/api/quotes/' + newQuote._id)
         .expect(404)
         .end((err, res) => {
           if (err) {

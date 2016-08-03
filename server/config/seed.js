@@ -4,9 +4,9 @@
  */
 
 'use strict';
-import Thing from '../api/thing/thing.model';
+//import Thing from '../api/thing/thing.model';
 
-Thing.find({}).remove()
+/*Thing.find({}).remove()
   .then(() => {
     Thing.create({
       name: 'Development Tools',
@@ -37,4 +37,4 @@ Thing.find({}).remove()
              'and openshift subgenerators'
     });
   });
-
+*/
