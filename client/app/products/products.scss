@@ -1,0 +1,80 @@
+#top{
+  position: relative;
+  margin-left: 0px;
+  width: 100%;
+  background-color: #0b121d;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#top h1 {
+  font-size: 50px;
+  line-height: 1;
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+  letter-spacing: -1px;
+  margin-top: 150px;
+}
+#top p{
+  font-size: 20px;
+  color: white;
+}
+.blog {
+  padding: 30px 15px;
+  color: #F5F5F5;
+  text-align: center;
+  color: white;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.cover{
+  min-height: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(11,18,29,.7);
+}
+section{
+  background: linear-gradient(135deg,#fafafa 0,#f2f2f2 60%,#eaeaea 100%);
+}
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.info{
+  margin-bottom: 0px;
+  color: #90A4AE;
+}
+.main_post_img{
+  height: 300px;
+  width:100%;
+}
+.post > div{
+  margin-bottom: 30px;
+}
+.box{
+  //need breakpoints
+}
+.single_tag p{
+  padding-top:2px;
+  color:#90A4AE;
+}
+#tags i{
+  margin-right: 10px;
+  padding-top: 4px;
+  font-size: medium;
+}
+#tags{
+  display: inline-flex;
+  margin-top: 10px;
+}
+#product-nav{
+  background-color: #0b121d
+}
+.shirt-text{
+  display: block;
+  margin: 0 50% 0 50%;
+}
+.fancy-text{
+  text-decoration: none;
+}
