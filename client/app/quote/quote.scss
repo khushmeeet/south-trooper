@@ -9,12 +9,17 @@
   text-align: center;
   margin-top: 50px;
 }
-#textarea{
-  width: 35%;
-  box-sizing: border-box;
+.left-label{
+  float: left;
+  width: 25%;
+  vertical-align: middle;
 }
-#quote-button{
-  margin-top: 25px;
+.right-form{
+  float: right;
+  width: 70%;
+}
+.form-row{
+  margin-top: 20px;
 }
 body[dir=rtl] .hint {
   right: 2px;

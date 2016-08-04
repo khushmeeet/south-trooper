@@ -2,8 +2,7 @@
 (function(){
 
 class QuoteComponent {
-  constructor() {
-    this.message = 'Hello';
+  constructor($scope) {
   }
 }
 
