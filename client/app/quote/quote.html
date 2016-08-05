@@ -18,6 +18,86 @@
     <div class="col-md-6">
       <div>
         <md-card>
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline headline">Mandatory</span>
+            </md-card-title-text>
+          </md-card-title>
+          <md-card-content>
+            <form>
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <div class="left-label">
+                      <label for="name">Name</label>
+                    </div>
+                    <div class="right-form">
+                      <input type="text" class="form-control " id="name" placeholder="Name">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <div class="left-label">
+                      <label for="orgname">Organization</label>
+                    </div>
+                    <div class="right-form">
+                      <input type="text" class="form-control " id="orgname" placeholder="Organization">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <div class="left-label">
+                      <label for="phone">Phone</label>
+                    </div>
+                    <div class="right-form">
+                      <input type="number" class="form-control " id="phone" placeholder="Phone">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <div class="left-label">
+                      <label>Product required</label>
+                    </div>
+                    <div class="right-form">
+                      <select class="form-control input-lg">
+                        <option>Round Neck</option>
+                        <option>Pollo / Collar</option>
+                        <option>Fullsleeve / V-Neck</option>
+                        <option>Hoodies</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <div class="left-label">
+                      <label for="quantity">Quantity</label>
+                    </div>
+                    <div class="right-form">
+                      <input type="number" class="form-control" id="quantity" placeholder="Quantity">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </md-card-content>
+        </md-card>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div>
+        <md-card>
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline"></span>
@@ -25,14 +105,14 @@
         </md-card-title>
         <md-card-content>
           <form>
-            <div class="row">
+            <div class="row ">
               <div class="form-group">
                 <div class="col-md-12">
                   <div class="left-label">
-                    <label for="name">Name</label>
+                    <label for="address">Address</label>
                   </div>
                   <div class="right-form">
-                    <input type="text" class="form-control" id="name" placeholder="Name">
+                    <input type="text" class="form-control " id="address" placeholder="Address">
                   </div>
                 </div>
               </div>
@@ -41,10 +121,29 @@
               <div class="form-group">
                 <div class="col-md-12">
                   <div class="left-label">
-                    <label>Organization</label>
+                    <label for="size">Break by Size</label>
                   </div>
                   <div class="right-form">
-                    <input type="text" class="form-control" id="orgname" placeholder="Organization">
+                    <div class="col-md-2 padding-right">
+                      <label>S</label>
+                      <input type="text" name="s" value/>
+                    </div>
+                    <div class="col-md-2 padding-right">
+                      <label>M</label>
+                      <input type="text" name="m" value/>
+                    </div>
+                    <div class="col-md-2 padding-right">
+                      <label>L</label>
+                      <input type="text" name="l" value/>
+                    </div>
+                    <div class="col-md-2 padding-right">
+                      <label>XL</label>
+                      <input type="text" name="xl" value/>
+                    </div>
+                    <div class="col-md-2 padding-right">
+                      <label>XXL</label>
+                      <input type="text" name="xxl" value/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -53,27 +152,19 @@
               <div class="form-group">
                 <div class="col-md-12">
                   <div class="left-label">
-                    <label>Product required</label>
+                    <label for="name">Design ready</label>
                   </div>
                   <div class="right-form">
-                    <select class="form-control">
-                      <option>Round Neck</option>
-                      <option>Pollo / Collar</option>
-                      <option>Fullsleeve / V-Neck</option>
-                      <option>Hoodies</option>
-                    </select>
+                    <input type="file" name="attach" value="Select Images"/>
+                    <br />
+                    <input type="checkbox" value="Need help" name="needhelp"/>
+                    <label>Kinda, I may need help</label>
                   </div>
                 </div>
               </div>
             </div>
           </form>
         </md-card-content>
-      </md-card>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div>
-
       </div>
     </div>
   </div>

@@ -21,6 +21,12 @@
 .form-row{
   margin-top: 20px;
 }
+.padding-right{
+  padding-right: 0px;
+  input{
+    width: 100%;
+  }
+}
 body[dir=rtl] .hint {
   right: 2px;
   left: auto;
