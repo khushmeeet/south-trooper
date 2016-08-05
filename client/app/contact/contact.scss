@@ -1,0 +1,35 @@
+.list-unstyled{
+  li{
+    padding-top: 7px;
+  }
+}
+#contact{
+  font-weight: 600;
+  padding-right: 7px;
+  line-height: 42px;
+}
+#us{
+  font-weight: lighter;
+}
+.contact-padding{
+  padding: 0 20% 10px 20%;
+  form{
+    .col-md-6:first-child{
+      padding: 0px;
+    }
+  }
+}
+.contact-form{
+  padding-left: 10px;
+}
+.left{
+  float: left;
+  width: 20%;
+}
+.right{
+  float: right;
+  width: 40%;
+}
+.contact-button{
+  padding: 0 50% 0 50%;
+}
