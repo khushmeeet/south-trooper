@@ -17,6 +17,7 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/contact/contact.socket').register(socket);
   require('../api/quote/quote.socket').register(socket);
 }
 
