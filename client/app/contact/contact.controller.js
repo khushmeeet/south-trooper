@@ -36,8 +36,8 @@
           );*/
           }
         }
-      }
-
+    }
+}
       angular.module('southTrooperApp')
         .component('contact', {
           templateUrl: 'app/contact/contact.html',

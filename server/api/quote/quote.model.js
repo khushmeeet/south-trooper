@@ -3,13 +3,21 @@
 import mongoose from 'mongoose';
 
 var QuoteSchema = new mongoose.Schema({
-  fname: String,
+  name: String,
   email: String,
+  org: String,
   phone: Number,
-  items: Number,
-  quality:String,
-  artwork:String,
-  info:String
+  address: String,
+  product_required: String,
+  size_quantity:{
+    s: Number,
+    m: Number,
+    l: Number,
+    xl: Number,
+    xxl: Number,
+  },
+  upload: Boolean,
+  quantity: Number
 });
 
 export default mongoose.model('Quote', QuoteSchema);

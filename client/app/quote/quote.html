@@ -20,11 +20,11 @@
         <md-card>
           <md-card-title>
             <md-card-title-text>
-              <span class="md-headline headline">Mandatory</span>
+              <span class="md-headline headline"></span>
             </md-card-title-text>
           </md-card-title>
           <md-card-content>
-            <form>
+            <form name="form1">
               <div class="row">
                 <div class="form-group">
                   <div class="col-md-12">
@@ -32,7 +32,7 @@
                       <label for="name">Name</label>
                     </div>
                     <div class="right-form">
-                      <input type="text" class="form-control " id="name" placeholder="Name">
+                      <input type="text" class="form-control " id="name" placeholder="Name" ng-model="name">
                     </div>
                   </div>
                 </div>
@@ -44,7 +44,7 @@
                       <label for="orgname">Organization</label>
                     </div>
                     <div class="right-form">
-                      <input type="text" class="form-control " id="orgname" placeholder="Organization">
+                      <input type="text" class="form-control " id="orgname" placeholder="Organization" ng-model="org">
                     </div>
                   </div>
                 </div>
@@ -56,7 +56,7 @@
                       <label for="phone">Phone</label>
                     </div>
                     <div class="right-form">
-                      <input type="number" class="form-control " id="phone" placeholder="Phone">
+                      <input type="number" class="form-control " id="phone" placeholder="Phone" ng-model="phone">
                     </div>
                   </div>
                 </div>
@@ -65,15 +65,10 @@
                 <div class="form-group">
                   <div class="col-md-12">
                     <div class="left-label">
-                      <label>Product required</label>
+                      <label>Email</label>
                     </div>
                     <div class="right-form">
-                      <select class="form-control input-lg">
-                        <option>Round Neck</option>
-                        <option>Pollo / Collar</option>
-                        <option>Fullsleeve / V-Neck</option>
-                        <option>Hoodies</option>
-                      </select>
+                      <input ng-model="email" class="form-control" id="email" placeholder="Email" ng-model="email">
                     </div>
                   </div>
                 </div>
@@ -82,10 +77,10 @@
                 <div class="form-group">
                   <div class="col-md-12">
                     <div class="left-label">
-                      <label for="quantity">Quantity</label>
+                      <label for="address">Address</label>
                     </div>
                     <div class="right-form">
-                      <input type="number" class="form-control" id="quantity" placeholder="Quantity">
+                      <input type="text" class="form-control " id="address" placeholder="Address" ng-model="address">
                     </div>
                   </div>
                 </div>
@@ -104,15 +99,17 @@
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
-          <form>
-            <div class="row ">
+          <form name="form2">
+            <div class="row form-row">
               <div class="form-group">
                 <div class="col-md-12">
                   <div class="left-label">
-                    <label for="address">Address</label>
+                    <label>Product required</label>
                   </div>
                   <div class="right-form">
-                    <input type="text" class="form-control " id="address" placeholder="Address">
+                    <select ng-model="type" ng-options="i for i in product_required" class="form-control">
+                      <option value="">Select</option>
+                    </select>
                   </div>
                 </div>
               </div>
@@ -126,23 +123,23 @@
                   <div class="right-form">
                     <div class="col-md-2 padding-right">
                       <label>S</label>
-                      <input type="text" name="s" value/>
+                      <input type="text" name="s" value="0" ng-model="s"/>
                     </div>
                     <div class="col-md-2 padding-right">
                       <label>M</label>
-                      <input type="text" name="m" value/>
+                      <input type="text" name="m" value="0"ng-model="m"/>
                     </div>
                     <div class="col-md-2 padding-right">
                       <label>L</label>
-                      <input type="text" name="l" value/>
+                      <input type="text" name="l" value="0" ng-model="l"/>
                     </div>
                     <div class="col-md-2 padding-right">
                       <label>XL</label>
-                      <input type="text" name="xl" value/>
+                      <input type="text" name="xl" value="0" ng-model="xl"/>
                     </div>
                     <div class="col-md-2 padding-right">
                       <label>XXL</label>
-                      <input type="text" name="xxl" value/>
+                      <input type="text" name="xxl" value="0" ng-model="xxl"/>
                     </div>
                   </div>
                 </div>
@@ -157,8 +154,20 @@
                   <div class="right-form">
                     <input type="file" name="attach" value="Select Images"/>
                     <br />
-                    <input type="checkbox" value="Need help" name="needhelp"/>
+                    <input type="checkbox" value="Need help" name="needhelp" ng-model="needhelp"/>
                     <label>Kinda, I may need help</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row form-row" style="margin-top:8px;">
+              <div class="form-group">
+                <div class="col-md-12">
+                  <div class="left-label">
+                    <label for="quantity">Quantity</label>
+                  </div>
+                  <div class="right-form">
+                    <input type="number" class="form-control" id="quantity" placeholder="Quantity" ng-model="quantity">
                   </div>
                 </div>
               </div>
@@ -167,5 +176,8 @@
         </md-card-content>
       </div>
     </div>
-  </div>
+    </div>
+    <div class="row btn-center form-row">
+      <button class="btn btn-default" type="submit" ng-click="getQuote(form1,form2)">Button</button>
+    </div>
 </section>
