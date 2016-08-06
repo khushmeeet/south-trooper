@@ -4,8 +4,9 @@ import mongoose from 'mongoose';
 
 var ContactSchema = new mongoose.Schema({
   name: String,
-  info: String,
-  active: Boolean
+  email: String,
+  subject: String,
+  message: String,
 });
 
 export default mongoose.model('Contact', ContactSchema);

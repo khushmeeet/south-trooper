@@ -2,8 +2,10 @@
 (function(){
 
 class ContactComponent {
-  constructor() {
-    this.message = 'Hello';
+  constructor($scope) {
+    $scope.sendContact = function(){
+      conole.log($scope.contact)
+    }
   }
 }
 
