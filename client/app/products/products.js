@@ -16,4 +16,13 @@ angular.module('southTrooperApp')
           }
         }
       })
+      .state('products.pollo',{
+        url: '/products/pollo',
+        views:{
+          'shirt@products':{
+            templateUrl:'pollo.html',
+            controller:'polloCtrl'
+          }
+        }
+      })
   });

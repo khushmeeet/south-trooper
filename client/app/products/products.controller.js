@@ -3,7 +3,7 @@
 
 class ProductsComponent {
   constructor() {
-    this.message = 'Hello';
+    
   }
 }
 
