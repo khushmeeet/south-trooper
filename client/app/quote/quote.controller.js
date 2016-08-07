@@ -20,7 +20,8 @@
           quote.address = $scope.address;
         }
         if (form2.$valid) {
-          console.log($scope.s);
+          console.log($scope.file);
+          console.dir($scope.s);
           quote.product_required = $scope.type;
           quote.size_quantity = {};
           quote.size_quantity.s = $scope.s;
@@ -32,7 +33,7 @@
           quote.quantity = $scope.quantity;
         }
         quoteService.save(quote,
-          function success(success) {
+          function pass(success) {
             console.log(success);
           },
           function fail(error) {
