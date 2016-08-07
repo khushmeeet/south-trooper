@@ -8,7 +8,7 @@ angular.module('southTrooperApp', [
   'btford.socket-io',
   'ui.router',
   'ngMaterial',
-  'ngMessages'
+  'ngMessages',
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

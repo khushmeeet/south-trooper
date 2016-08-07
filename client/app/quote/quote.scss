@@ -30,6 +30,24 @@
 .btn-center{
   padding: 0 45% 0 45%;
 }
+.drop-box-container {
+    height: 10px;
+    width: 10px;
+    margin: 0 auto;
+    display: table;
+}
+.drop-box {
+    background: #F8F8F8;
+    border: 5px dashed #DDD;
+    //width: 50px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+.dragover {
+    border: 5px dashed blue;
+}
+
 body[dir=rtl] .hint {
   right: 2px;
   left: auto;

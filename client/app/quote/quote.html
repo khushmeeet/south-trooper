@@ -152,7 +152,24 @@
                     <label for="name">Design ready</label>
                   </div>
                   <div class="right-form">
-                    <input type="file" name="attach" value="Select Images" ng-model="file"/>
+                    <div ng-show="!imageSelected"
+                         class="drop-box drop-box-container"
+                         ngf-drag-over-class="drop-box-dragover"
+                         ngf-change="readFileImg($files)"
+                         ngf-drop ngf-select
+                         ng-model="files"
+                         ngf-multiple="false"
+                         ngf-allow-dir="false"
+                         accept="image/*" ng-cloak>
+                      <span>image</span>
+                    </div>
+                    <div class="drop-box-container" ng-show="loading" ng-cloak>
+                      <div class="wrap">
+                        <md-progress-circular class="md-hue-2" ng-show="loading"
+                          md-mode="indeterminate" style="margin: auto;">
+                        </md-progress-circular>
+                      </div>
+                    </div>
                     <br />
                     <input type="checkbox" value="Need help" name="needhelp" ng-model="needhelp"/>
                     <label>Kinda, I may need help</label>
@@ -181,3 +198,4 @@
       <button class="btn btn-default" type="submit" ng-click="getQuote(form1,form2)">Button</button>
     </div>
 </section>
+<footer></footer>

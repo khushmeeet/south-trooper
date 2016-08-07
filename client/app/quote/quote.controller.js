@@ -2,14 +2,35 @@
 (function() {
 
   class QuoteComponent {
-    constructor($scope, quoteService) {
+    constructor($scope, quoteService, $mdToast, ImageService) {
       $scope.product_required = [
         'Round Neck',
         'Pollo / Collar',
         'Fullsleeve / V-Neck',
         'Hoodies'
       ];
-      var quote = {}
+      $scope.imageSelected = false;
+
+      $scope.readFileImg = function(files) {
+        //$scope.user.photo = undefined;
+        if (files && files.length) {
+          ImageService.readImageFile(files[0], function(err, img) {
+            if (err) {
+              var toast = $mdToast.simple()
+                .textContent('Image not saved')
+                .action('Error')
+                .highlightAction(false)
+                .position('top')
+                .theme('error-toast');
+              return $mdToast.show(toast);
+            }
+            $scope.imageSelected = img;
+          });
+        }
+      };
+
+
+      var quote = {};
 
       $scope.getQuote = function(form1, form2) {
         if (form1.$valid) {
@@ -40,6 +61,8 @@
             console.log(error);
           }
         );
+        $scope.imageSelected = false;
+
       }
     }
   }
