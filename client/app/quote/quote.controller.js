@@ -24,6 +24,7 @@
                 .theme('error-toast');
               return $mdToast.show(toast);
             }
+            console.log(img);
             $scope.imageSelected = img;
           });
         }

@@ -100,7 +100,7 @@
         </md-card-title>
         <md-card-content>
           <form name="form2">
-            <div class="row form-row">
+            <div class="row">
               <div class="form-group">
                 <div class="col-md-12">
                   <div class="left-label">
@@ -152,17 +152,16 @@
                     <label for="name">Design ready</label>
                   </div>
                   <div class="right-form">
-                    <div ng-show="!imageSelected"
-                         class="drop-box drop-box-container"
+                    <input ng-show="!imageSelected"
                          ngf-drag-over-class="drop-box-dragover"
                          ngf-change="readFileImg($files)"
                          ngf-drop ngf-select
                          ng-model="files"
+                         type="file"
                          ngf-multiple="false"
                          ngf-allow-dir="false"
                          accept="image/*" ng-cloak>
-                      <span>image</span>
-                    </div>
+                    </input>
                     <div class="drop-box-container" ng-show="loading" ng-cloak>
                       <div class="wrap">
                         <md-progress-circular class="md-hue-2" ng-show="loading"
@@ -177,7 +176,7 @@
                 </div>
               </div>
             </div>
-            <div class="row form-row" style="margin-top:8px;">
+            <div class="row form-row" >
               <div class="form-group">
                 <div class="col-md-12">
                   <div class="left-label">
