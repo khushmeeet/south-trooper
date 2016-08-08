@@ -11,7 +11,7 @@ angular.module('southTrooperApp')
         url: '/products/roundneck',
         views:{
           'shirt@products':{
-            templateUrl: 'roundneck.html',
+            templateUrl: 'app/products/roundneck.html',
             controller: 'roundneckCtrl'
           }
         }
@@ -20,7 +20,7 @@ angular.module('southTrooperApp')
         url: '/products/pollo',
         views:{
           'shirt@products':{
-            templateUrl:'pollo.html',
+            templateUrl:'app/products/pollo.html',
             controller:'polloCtrl'
           }
         }
