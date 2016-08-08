@@ -9,6 +9,7 @@ angular.module('southTrooperApp', [
   'ui.router',
   'ngMaterial',
   'ngMessages',
+  'ngFileUpload'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
