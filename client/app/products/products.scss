@@ -1,8 +1,8 @@
-#top{
+#top {
   position: relative;
-  margin-left: 0px;
+  margin-left: 0;
   width: 100%;
-  background-color: #0b121d;
+  background-image: url('/assets/images/DSC_1861.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,54 +26,132 @@
   color: white;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
-.cover{
+.cover {
   min-height: 100%;
   min-height: 320px;
   display: flex;
   align-items: center;
   background-color: rgba(11,18,29,.7);
 }
-
-.row{
-  margin-left: 0px;
-  margin-right: 0px;
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
-.info{
-  margin-bottom: 0px;
+.info {
+  margin-bottom: 0;
   color: #90A4AE;
 }
-.main_post_img{
+.main_post_img {
   height: 300px;
-  width:100%;
+  width: 100%;
 }
-.post > div{
+.post > div {
   margin-bottom: 30px;
 }
-.box{
+.box {
   //need breakpoints
 }
-.single_tag p{
-  padding-top:2px;
-  color:#90A4AE;
+.single_tag p {
+  padding-top: 2px;
+  color: #90A4AE;
 }
-#tags i{
+#tags i {
   margin-right: 10px;
   padding-top: 4px;
   font-size: medium;
 }
-#tags{
+#tags {
   display: inline-flex;
   margin-top: 10px;
 }
-#product-nav{
-  background-color: #0b121d
+.intro-box{
+  margin-top: 30px;
+  div{
+    margin: 5% 0 5% 0;
+    text-align: center;
+    h4{
+      font-weight: bold;
+    }
+    p{
+
+    }
+  }
 }
-.shirt-text{
+#product-nav {
+  background-color: #0b121d;
+}
+.shirt-text {
   display: block;
 }
-.fancy-text{
+.fancy-text {
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   padding: 5% 10%;
+  color: white;
+}
+// ---------------------------ui-view(round-neck)-------------------------------
+.view {
+  margin-top: 40px;
+}
+.left-image {
+  float: left;
+  width: 63.33%;
+}
+.right-image {
+  float: right;
+  width: 32.55%;
+}
+table {
+  margin-top: 15px;
+  thead {
+    display: table-header-group;
+    font-size: 0.9em;
+    border-bottom: 1px solid #ddd;
+    background-color: #A9A9A9;
+    vertical-align: middle;
+    tr th {
+      padding: 2% 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  tbody {
+    background-color: #DCDCDC;
+    tr {
+      td {
+        border-bottom: 1px solid #CDCDCD;
+        width: 12%;
+        text-align: center;
+        padding: 1.5%;
+        div{
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+.color-box{
+  width: 17px;
+  height: 17px;
+  margin: 1px;
+  border: 1px solid #a9a9a9;
+}
+.cblue{
+  background-color: blue;
+}
+.cred{
+  background-color: red;
+}
+.cyellow{
+  background-color: yellow;
+}
+.cgreen{
+  background-color: green;
+}
+.cgrey{
+  background-color: #778899;
+}
+.cbrown{
+  background-color: brown;
 }
