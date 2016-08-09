@@ -3,4 +3,21 @@ footer.footer {
   padding: 30px 0;
   margin-top: 70px;
   border-top: 1px solid #E5E5E5;
+  background-color: #0b121d;
+  color: white;
+}
+.container{
+  .col-md-4{
+    h4{
+      text-align: left;
+    }
+    p{
+      text-align: left;
+    }
+  }
+}
+.inner{
+  padding-top: 30%;
+}
+.center-text{
 }
