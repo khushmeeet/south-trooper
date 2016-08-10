@@ -25,4 +25,22 @@ angular.module('southTrooperApp')
           }
         }
       })
+      .state('products.vneck',{
+        url: '/products/vneck',
+        views:{
+          'shirt@products':{
+            templateUrl:'app/products/vneck.html',
+            controller:'vneckCtrl'
+          }
+        }
+      })
+      .state('products.hoodies',{
+        url: '/products/hoodies',
+        views:{
+          'shirt@products':{
+            templateUrl:'app/products/hoodies.html',
+            controller:'hoodiesCtrl'
+          }
+        }
+      })
   });
