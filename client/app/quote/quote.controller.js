@@ -10,6 +10,7 @@
         'Hoodies'
       ];
       $scope.imageSelected = false;
+      var image;
 
       $scope.readFileImg = function(files) {
         //$scope.user.photo = undefined;
@@ -25,7 +26,7 @@
               return $mdToast.show(toast);
             }
             console.log(img);
-            $scope.imageSelected = img;
+            image = img;
           });
         }
       };
@@ -53,6 +54,7 @@
           quote.size_quantity.xxl = $scope.xxl;
           quote.upload = $scope.needhelp;
           quote.quantity = $scope.quantity;
+          quote.photo = image;
         }
         quoteService.save(quote,
           function pass(success) {
@@ -63,7 +65,6 @@
           }
         );
         $scope.imageSelected = false;
-
       }
     }
   }
