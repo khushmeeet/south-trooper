@@ -16,6 +16,7 @@ var QuoteSchema = new mongoose.Schema({
     xl: Number,
     xxl: Number,
   },
+  photo: String,
   upload: Boolean,
   quantity: Number
 });
