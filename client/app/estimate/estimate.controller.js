@@ -2,8 +2,14 @@
 (function(){
 
 class EstimateComponent {
-  constructor() {
-    this.message = 'Hello';
+  constructor($scope) {
+    $scope.product_required = [
+      'Round Neck',
+      'Pollo / Collar',
+      'Fullsleeve / V-Neck',
+      'Hoodies'
+    ];
+    $scope.size = ['A4', 'A3'];
   }
 }
 

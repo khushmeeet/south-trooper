@@ -1,1 +1,199 @@
-<div>This is the estimate view.</div>
+<navbar></navbar>
+<div class="blog cover" id="top">
+  <div class="container">
+    <h1>Estimate</h1>
+    <p>
+      Fill out the form and get your expected price.
+    </p>
+  </div>
+</div>
+<!-- follow quote.scss -->
+<section>
+  <div class="container">
+    <div class="col-md-12">
+      <div>
+        <md-card>
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline headline"></span>
+            </md-card-title-text>
+          </md-card-title>
+          <md-card-content>
+            <form name="form1" novalidate>
+              <div class="row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <div class="left-label">
+                      <label>Product required</label>
+                    </div>
+                    <div class="right-form">
+                      <select ng-model="type" ng-options="i for i in product_required" class="form-control" required>
+                        <option value="">Select</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <div class="left-label">
+                      <label for="orgname">Front</label>
+                    </div>
+                    <div class="right-form">
+                      <div class="row side">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" value="option1" checked ng-model="fprint">
+                            Print
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" value="option2" ng-model="fembroidery">
+                            Embroidery
+                          </label>
+                        </div>
+                        <div style="margin-right:20px;">
+                          <input type="number" class="form-control input-sm" placeholder="Colors">
+                        </div>
+                        <div>
+                          <select ng-model="fsize" ng-options="i for i in size" class="form-control input-sm" required>
+                            <option value="">Select</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="left-label">
+                      <label for="orgname">Back</label>
+                    </div>
+                    <div class="right-form">
+                      <div class="row side">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" value="option1" checked ng-model="bprint">
+                            Print
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" value="option2" ng-model="bembroidery">
+                            Embroidery
+                          </label>
+                        </div>
+                        <div style="margin-right:20px;">
+                          <input type="number" class="form-control input-sm" placeholder="Colors">
+                        </div>
+                        <div>
+                          <select ng-model="bsize" ng-options="i for i in size" class="form-control input-sm" required>
+                            <option value="">Select</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="left-label">
+                      <label for="orgname">Left Sleeve</label>
+                    </div>
+                    <div class="right-form">
+                      <div class="row side">
+                        <div class="radio">
+                          <label>
+                            <input type="radio"  value="option1" checked ng-model="lsprint">
+                            Print
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" value="option2" ng-model="lsembroidery">
+                            Embroidery
+                          </label>
+                        </div>
+                        <div style="margin-right:20px;">
+                          <input type="number" class="form-control input-sm" placeholder="Colors">
+                        </div>
+                        <div>
+                          <select ng-model="lssize" ng-options="i for i in size" class="form-control input-sm" required>
+                            <option value="">Select</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="left-label">
+                      <label for="orgname">Right Sleeve</label>
+                    </div>
+                    <div class="right-form">
+                      <div class="row side">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" value="option1" checked ng-model="rsprint">
+                            Print
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" value="option2" ng-model="rsembroidery">
+                            Embroidery
+                          </label>
+                        </div>
+                        <div style="margin-right:20px;">
+                          <input type="number" class="form-control input-sm" placeholder="Colors">
+                        </div>
+                        <div>
+                          <select ng-model="rssize" ng-options="i for i in size" class="form-control input-sm" required>
+                            <option value="">Select</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <div class="left-label">
+                      <label for="phone">Quantity</label>
+                    </div>
+                    <div class="right-form">
+                      <input type="number" class="form-control " id="quantity" placeholder="quantity" ng-model="quantity" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <div class="left-label">
+                      <label>Price per unit</label>
+                    </div>
+                    <div class="right-form"><span>&#8377;</span>
+                      <input type="number" class="form-control" id="email" placeholder="Price per unit" ng-model="ppu">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row form-row">
+                <div class="form-group">
+                  <div class="col-md-12">
+                    <div class="left-label">
+                      <label for="address">Total</label>
+                    </div>
+                    <div class="right-form"><span>&#8377;</span>
+                      <input type="number" class="form-control " id="total" placeholder="Total" ng-model="total">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </md-card-content>
+        </md-card>
+      </div>
+    </div>
+</section>
+<footer></footer>
