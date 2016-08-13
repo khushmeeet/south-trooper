@@ -24,7 +24,7 @@
             </md-card-title-text>
           </md-card-title>
           <md-card-content>
-            <form name="form1">
+            <form name="form1" novalidate>
               <div class="row">
                 <div class="form-group">
                   <div class="col-md-12">
@@ -32,7 +32,10 @@
                       <label for="name">Name</label>
                     </div>
                     <div class="right-form">
-                      <input type="text" class="form-control " id="name" placeholder="Name" ng-model="name">
+                      <input type="text" class="form-control " id="name" placeholder="Name" ng-model="name" required>
+                      <span style = "color:red" ng-show = "form1.name.$dirty && form1.name.$invalid">
+                        <span ng-show = "form1.name.$error.required">First Name is required.</span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -44,7 +47,10 @@
                       <label for="orgname">Organization</label>
                     </div>
                     <div class="right-form">
-                      <input type="text" class="form-control " id="orgname" placeholder="Organization" ng-model="org">
+                      <input type="text" class="form-control " id="orgname" placeholder="Organization" ng-model="org" required>
+                      <span style = "color:red" ng-show = "form1.orgname.$dirty && form1.orgname.$invalid">
+                        <span ng-show = "form1.orgname.$error.required">Organization name is required.</span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -56,7 +62,10 @@
                       <label for="phone">Phone</label>
                     </div>
                     <div class="right-form">
-                      <input type="number" class="form-control " id="phone" placeholder="Phone" ng-model="phone">
+                      <input type="number" class="form-control " id="phone" placeholder="Phone" ng-model="phone" required>
+                      <span style = "color:red" ng-show = "form1.phone.$dirty && form1.phone.$invalid">
+                        <span ng-show = "form1.phone.$error.required">Phone Number is required.</span>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -68,7 +77,11 @@
                       <label>Email</label>
                     </div>
                     <div class="right-form">
-                      <input ng-model="email" class="form-control" id="email" placeholder="Email" ng-model="email">
+                      <input type="email" ng-model="email" class="form-control" id="email" placeholder="Email" ng-model="email" required>
+                      <span style = "color:red" ng-show = "form1.email.$dirty && form1.email.$invalid">
+                        <span ng-show = "form1.email.$error.required">Email is required.</span>
+                        <span ng-show = "form1.email.$error.email">Invalid email address.</span>
+                     </span>
                     </div>
                   </div>
                 </div>
@@ -99,7 +112,7 @@
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
-          <form name="form2">
+          <form name="form2" novalidate>
             <div class="row">
               <div class="form-group">
                 <div class="col-md-12">
@@ -107,7 +120,7 @@
                     <label>Product required</label>
                   </div>
                   <div class="right-form">
-                    <select ng-model="type" ng-options="i for i in product_required" class="form-control">
+                    <select ng-model="type" ng-options="i for i in product_required" class="form-control" required>
                       <option value="">Select</option>
                     </select>
                   </div>
@@ -123,11 +136,11 @@
                   <div class="right-form">
                     <div class="col-md-2 padding-right">
                       <label>S</label>
-                      <input type="text" name="s" value="0" ng-model="s"/>
+                      <input type="text" name="s" value=0 ng-model="s"/>
                     </div>
                     <div class="col-md-2 padding-right">
                       <label>M</label>
-                      <input type="text" name="m" value="0"ng-model="m"/>
+                      <input type="text" name="m" value="0" ng-model="m"/>
                     </div>
                     <div class="col-md-2 padding-right">
                       <label>L</label>
@@ -162,15 +175,8 @@
                          ngf-allow-dir="false"
                          accept="image/*" ng-cloak>
                     </input>
-                    <div class="drop-box-container" ng-show="loading" ng-cloak>
-                      <div class="wrap">
-                        <md-progress-circular class="md-hue-2" ng-show="loading"
-                          md-mode="indeterminate" style="margin: auto;">
-                        </md-progress-circular>
-                      </div>
-                    </div>
                     <br />
-                    <input type="checkbox" value="Need help" name="needhelp" ng-model="needhelp"/>
+                    <input type="checkbox" value="Need help" name="needhelp" ng-model="needhelp" required/>
                     <label>Kinda, I may need help</label>
                   </div>
                 </div>
@@ -183,7 +189,10 @@
                     <label for="quantity">Quantity</label>
                   </div>
                   <div class="right-form">
-                    <input type="number" class="form-control" id="quantity" placeholder="Quantity" ng-model="quantity">
+                    <input type="number" class="form-control" id="quantity" placeholder="Quantity" ng-model="quantity" required>
+                    <span style = "color:red" ng-show = "form2.quantity.$dirty && form2.quantity.$invalid">
+                      <span ng-show = "form2.quantity.$error.required">Quantity is required.</span>
+                    </span>
                   </div>
                 </div>
               </div>

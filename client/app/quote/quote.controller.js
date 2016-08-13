@@ -9,7 +9,6 @@
         'Fullsleeve / V-Neck',
         'Hoodies'
       ];
-      $scope.imageSelected = false;
       var image;
 
       $scope.readFileImg = function(files) {
@@ -25,7 +24,6 @@
                 .theme('error-toast');
               return $mdToast.show(toast);
             }
-            console.log(img);
             image = img;
           });
         }
@@ -43,8 +41,6 @@
           quote.address = $scope.address;
         }
         if (form2.$valid) {
-          console.log($scope.file);
-          console.dir($scope.s);
           quote.product_required = $scope.type;
           quote.size_quantity = {};
           quote.size_quantity.s = $scope.s;
@@ -55,16 +51,21 @@
           quote.upload = $scope.needhelp;
           quote.quantity = $scope.quantity;
           quote.photo = image;
+          quoteService.save(quote,
+            function pass(success) {
+              console.log(success);
+            },
+            function fail(error) {
+              console.log(error);
+            }
+          );
+          var toast = $mdToast.simple()
+              .textContent('Your Quotation is sent')
+              .action('OK')
+              .highlightAction(false)
+              .position('bottom right');
+            $mdToast.show(toast);
         }
-        quoteService.save(quote,
-          function pass(success) {
-            console.log(success);
-          },
-          function fail(error) {
-            console.log(error);
-          }
-        );
-        $scope.imageSelected = false;
       }
     }
   }
