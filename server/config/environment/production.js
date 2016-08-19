@@ -19,6 +19,6 @@ module.exports = {
           process.env.MONGOHQ_URL ||
           process.env.OPENSHIFT_MONGODB_DB_URL +
           process.env.OPENSHIFT_APP_NAME ||
-          'mongodb://localhost/southtrooper'
+          'mongodb://heroku_9pnmfmh5:arlks2oqq4hhl7mcq96gck2iei@ds161295.mlab.com:61295/heroku_9pnmfmh5'
   }
 };

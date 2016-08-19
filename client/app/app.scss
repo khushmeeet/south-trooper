@@ -16,6 +16,9 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 div.ng-scope{
   background-color: #d3d3d3;
 }
+*{
+  font-family: 'Open Sans', sans-serif;
+}
 
 // Component styles are injected through grunt
 /* inject:scss */
